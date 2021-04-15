@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Headlines</title>
+</head>
+<body>
+    <h1>Hello, {{ name }}!</h1>
+    <p>Today's technology headlines are...</p>
+    <ol>
+        {% for headline in headlines %}
+        <li>{{ headline }}</li>
+        {% endfor %}
+    </ol>
+</body>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Headlines</title>
+    <style>
+        table, th, td {border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <h1>Hello, {{ name }}!</h1>
+    <p>Today's technology headlines are...</p>
+    <table style="width:50%;">
+        <tr>
+          <th>Title</th>
+          <th>Thumbnail</th>
+        </tr>
+        {% for headline in headlines %}
+        <tr>
+            <td><a href='{{ headline.url }}'>{{ headline.title }}</a></td>
+            <td><img src='{{ headline.img }}'></td>
+        </tr>
+        {% endfor %}
+        
+      </table>
+</body>
